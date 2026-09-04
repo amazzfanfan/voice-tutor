@@ -1,0 +1,29 @@
+# Local secrets and environment overrides
+.env
+.env.*
+!.env.example
+*.local.ini
+*.local.json
+backend/src/conf/config.ini
+
+# Python
+**/.venv/
+**/__pycache__/
+**/*.py[cod]
+**/.pytest_cache/
+**/src/logs/
+**/_temp/
+
+# Node.js
+**/node_modules/
+**/build/
+**/coverage/
+
+# Runtime output
+*.log
+nohup.out
+
+# IDE and operating system
+.DS_Store
+.idea/
+.vscode/

@@ -1,0 +1,4 @@
+interface:
+  display_name: "AI语音讲师（纯讲解）"
+  short_description: "结合用户岗位、经验与实际使用场景进行有针对性的工业知识纯讲解"
+  default_prompt: "Use $voice-tutor-explain-only to explain this industrial topic for my role and usage scenario without quizzes."

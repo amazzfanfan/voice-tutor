@@ -1,0 +1,16 @@
+*.pyc
+__pycache__/
+src/logs/
+.venv/
+.idea
+
+/.codebuddy/
+.gstack/
+.DS_Store
+
+# Linux shared libraries
+*.so
+*.so.*
+
+# Design docs and plans (local only)
+docs/superpowers/

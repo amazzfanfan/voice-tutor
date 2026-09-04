@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "interaction_mode": "guided_practice",
+  "supports_quiz": true,
+  "description": "工业领域AI语音讲师",
+  "introduction": "你好，我是你的AI工业讲师。你可以用语音和我交流，我会用简洁口语化的方式引导你思考和学习。",
+  "max_response_chars": 500,
+  "postprocessor": "scripts/postprocess_response.py",
+  "references": {
+    "generation_rules": "generation-rules.md",
+    "turn_classifier": "turn-classifier.md",
+    "relevance_judge": "relevance-judge.md",
+    "followup_judge": "followup-judge.md",
+    "semantic_duplicate_check": "semantic-duplicate-check.md",
+    "duplicate_question_repair": "duplicate-question-repair.md",
+    "missing_question_repair": "missing-question-repair.md"
+  }
+}

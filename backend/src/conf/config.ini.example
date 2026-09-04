@@ -1,0 +1,113 @@
+[env_config]
+# 环境变量，dev/prod
+env = dev
+[paths]
+temp_dir = _temp
+mcp_output_dir = _temp/mineru_output
+mineru_input_dir = _temp/mineru_input
+# 业务后端地址（请按实际环境修改）
+backend_server = http://127.0.0.1:18080
+image_url = /api/files/images/download
+md_download_url = /api/files/markdown/download
+backend_access_key = <configure-locally>
+# 检索服务地址
+retrieval_server = http://127.0.0.1:18001
+file_chunk_url = /api/files/chunks
+retrieve_chunk_url = /api/retrieve/chunks
+web_search_url = /api/search/web
+
+[minio_config]
+# Minio配置开发环境
+endpoint_dev = 127.0.0.1:9000
+access_key_dev = <configure-locally>
+secret_key_dev = <configure-locally>
+secure_dev = False
+bucket_name_dev = <minio-bucket-name>
+
+# Minio配置生产环境
+endpoint_prod = minio.example.com:9000
+access_key_prod = <configure-locally>
+secret_key_prod = <configure-locally>
+secure_prod = False
+bucket_name_prod = <minio-bucket-name>
+
+# 文本生成MODEL配置
+[llm_config]
+# 内部模型配置
+internal_model_name_dev = <internal-model-name>
+internal_openai_api_base_dev = https://models.example.com/v1
+internal_openai_api_key_dev = <configure-locally>
+internal_model_name_prod = <internal-model-name>
+internal_openai_api_base_prod = https://models.example.com/v1
+internal_openai_api_key_prod = <configure-locally>
+
+# 外部模型开发环境配置
+external_model_name_dev = <external-model-name>
+external_openai_api_base_dev = https://api.example.com/v1
+external_openai_api_key_dev = <configure-locally>
+external_model_name_prod = <external-model-name>
+external_openai_api_base_prod = https://api.example.com/v1
+external_openai_api_key_prod = <configure-locally>
+
+# 嵌入模型配置
+[embeddings_config]
+ebd_model_name_dev = <embedding-model-name>
+ebd_model_name_prod = <embedding-model-name>
+ebd_model_server_dev = https://embeddings.example.com/v1
+ebd_model_server_prod = https://embeddings.example.com/v1
+ebd_apikey_dev = <configure-locally>
+ebd_apikey_prod = <configure-locally>
+
+[ocr_config]
+ocr_api_url_dev = https://ocr.example.com/layout-parsing
+ocr_api_url_prod = https://ocr.example.com/layout-parsing
+
+[voice_config]
+# DashScope API key (same as external model key)
+dashscope_api_key_dev = <configure-locally>
+dashscope_api_key_prod = <configure-locally>
+
+# STT model
+stt_model = <stt-model-name>
+sample_rate = 16000
+
+# TTS model
+tts_model = <tts-model-name>
+default_voice_id = longyumi_v3
+
+# Voice agent model (can differ from main chat model)
+voice_model_name_dev = <voice-llm-name>
+voice_model_name_prod = <voice-llm-name>
+
+# Active voice tutor Skill
+voice_tutor_skill = voice-tutor-explain-only
+
+# Session limits
+max_session_duration_min = 30
+session_idle_timeout_sec = 300
+max_response_length = 200
+
+# Knowledge source mode for the voice agent:
+# rag_only  = use the original RAG service only
+# wiki_only = use llm-wiki-demo only
+# rag_wiki  = merge llm-wiki-demo and original RAG contexts
+voice_knowledge_source = rag_only
+llm_wiki_base_url = http://127.0.0.1:8888
+llm_wiki_username = <wiki-username>
+llm_wiki_password = <configure-locally>
+llm_wiki_workspace = <wiki-workspace>
+llm_wiki_max_chars = 20000
+
+# Voice-side retrieval latency budget (seconds). Wiki and RAG run in parallel.
+voice_wiki_timeout_sec = 18.0
+voice_rag_timeout_sec = 20.0
+voice_rag_file_ids = <rag-file-name>
+voice_retrieval_total_timeout_sec = 20.5
+voice_web_fallback_timeout_sec = 3.0
+
+# Internal context limits. These do not change retrieval-service parameters.
+voice_wiki_context_max_chars = 2500
+voice_rag_max_chunks = 5
+voice_rag_chunk_max_chars = 900
+voice_rag_context_max_chars = 3000
+voice_fusion_max_chars = 4500

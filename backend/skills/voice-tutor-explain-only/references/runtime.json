@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "interaction_mode": "explain_only",
+  "supports_quiz": false,
+  "requires_profile": true,
+  "profile_once_per_session": true,
+  "defer_first_answer_until_profile": true,
+  "use_pending_topic_after_profile": true,
+  "skip_retrieval_for_conversation_control": true,
+  "skip_retrieval_for_unclear_or_noise": true,
+  "description": "贴合用户岗位与场景的工业领域AI语音讲师",
+  "introduction": "你好，我是你的AI工业讲师。你告诉我岗位和用途，我会按你的实际需要，把工业知识讲得清楚、好懂、能用。",
+  "max_response_chars": 500,
+  "postprocessor": "scripts/postprocess_response.py",
+  "references": {
+    "generation_rules": "generation-rules.md",
+    "relevance_judge": "relevance-judge.md",
+    "profile_policy": "profile-policy.md",
+    "noise_policy": "noise-policy.md",
+    "turn_classifier": "turn-classifier.md"
+  }
+}

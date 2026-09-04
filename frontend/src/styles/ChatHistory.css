@@ -1,0 +1,189 @@
+.chat-history {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.panel-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #eee;
+}
+
+.chat-list {
+  flex: 1;
+  overflow-y: auto;
+  padding-right: 8px;
+}
+
+.empty-history {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: #999;
+  font-size: 14px;
+}
+
+.chat-item {
+  padding: 14px 16px;
+  margin-bottom: 14px;
+  border-radius: 14px;
+}
+
+.chat-item.user {
+  background: #e3f2fd;
+  border-left: 3px solid #2196f3;
+}
+
+.chat-item.ai {
+  background: linear-gradient(145deg, #f7fbf2 0%, #f1f8e9 100%);
+  border: 1px solid #dcebcf;
+  border-left: 4px solid #75ba43;
+  box-shadow: 0 8px 24px rgba(76, 122, 50, 0.08);
+}
+
+.chat-role {
+  font-size: 12px;
+  color: #2196f3;
+  margin-bottom: 4px;
+  font-weight: 500;
+}
+
+.chat-item.ai .chat-role {
+  color: #5da52f;
+  margin-bottom: 8px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.chat-text {
+  font-size: 14px;
+  color: #333;
+  line-height: 1.72;
+}
+
+.chat-item.user .chat-text {
+  white-space: pre-wrap;
+}
+
+/* Markdown 样式 */
+.chat-text h1,
+.chat-text h2,
+.chat-text h3,
+.chat-text h4,
+.chat-text h5,
+.chat-text h6 {
+  margin: 14px 0 7px;
+  font-weight: 700;
+  line-height: 1.35;
+  color: #28441f;
+}
+
+.chat-text h1 { font-size: 18px; }
+.chat-text h2 { font-size: 16px; }
+.chat-text h3 {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 15px;
+}
+
+.chat-text h3::before {
+  content: '';
+  width: 4px;
+  height: 15px;
+  border-radius: 999px;
+  background: #75ba43;
+  flex: 0 0 auto;
+}
+
+.chat-text > :first-child {
+  margin-top: 0;
+}
+
+.chat-text > :last-child {
+  margin-bottom: 0;
+}
+
+.chat-text p {
+  margin: 8px 0;
+}
+
+.chat-item.ai .chat-text p {
+  white-space: pre-line;
+}
+
+.chat-text ul,
+.chat-text ol {
+  margin: 8px 0 10px;
+  padding-left: 22px;
+}
+
+.chat-text li {
+  margin: 5px 0;
+  padding-left: 2px;
+}
+
+.chat-item.ai .chat-text li::marker {
+  color: #69ad3d;
+}
+
+.chat-text strong {
+  font-weight: 700;
+  color: #243d1c;
+}
+
+.chat-text em {
+  font-style: italic;
+}
+
+.chat-text code {
+  background: rgba(0, 0, 0, 0.06);
+  padding: 1px 4px;
+  border-radius: 3px;
+  font-family: monospace;
+  font-size: 13px;
+}
+
+.chat-text pre {
+  background: #f5f5f5;
+  padding: 8px 12px;
+  border-radius: 6px;
+  overflow-x: auto;
+  margin: 6px 0;
+}
+
+.chat-text pre code {
+  background: none;
+  padding: 0;
+}
+
+.chat-text blockquote {
+  border-left: 3px solid #ddd;
+  margin: 6px 0;
+  padding-left: 12px;
+  color: #666;
+}
+
+.chat-text table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 6px 0;
+  font-size: 13px;
+}
+
+.chat-text th,
+.chat-text td {
+  border: 1px solid #ddd;
+  padding: 4px 8px;
+  text-align: left;
+}
+
+.chat-text th {
+  background: #f5f5f5;
+  font-weight: 600;
+}

@@ -1,0 +1,36 @@
+.status-indicator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background: #f8f9fa;
+  border-radius: 20px;
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.status-icon {
+  font-size: 16px;
+}
+
+.status-listening {
+  background: #e3f2fd;
+  color: #1976d2;
+}
+
+.status-processing {
+  background: #fff3e0;
+  color: #f57c00;
+}
+
+.status-speaking {
+  background: #e8f5e9;
+  color: #388e3c;
+}
+
+.status-idle {
+  background: #f8f9fa;
+  color: #666;
+}

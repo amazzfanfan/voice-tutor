@@ -1,0 +1,11 @@
+gcc
+gettext
+default-libmysqlclient-dev
+libpq-dev
+sqlite3
+libltdl7
+libldap2-dev
+libsasl2-dev
+procps
+inetutils-ping
+dos2unix

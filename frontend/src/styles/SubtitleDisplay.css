@@ -1,0 +1,67 @@
+.subtitle-display {
+  width: 100%;
+  max-width: 420px;
+  margin-bottom: 20px;
+  padding: 14px 16px;
+  background: #f8f9fa;
+  border-radius: 12px;
+  border: 1px solid #e8f5e9;
+}
+
+.subtitle-display--ticker {
+  max-width: min(560px, 86vw);
+  height: 48px;
+  padding: 0 18px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 999px;
+  background: #f8fbf8;
+  border-color: #dfeee3;
+  box-shadow: 0 8px 24px rgba(47, 92, 58, 0.08);
+}
+
+.subtitle-text {
+  font-size: 16px;
+  color: #333;
+  line-height: 1.6;
+  margin: 0;
+  text-align: center;
+}
+
+.subtitle-ticker {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 9%, #000 91%, transparent);
+  mask-image: linear-gradient(90deg, transparent, #000 9%, #000 91%, transparent);
+}
+
+.subtitle-ticker-track {
+  display: inline-block;
+  min-width: 100%;
+  padding-left: 100%;
+  font-size: 16px;
+  line-height: 48px;
+  color: #2d3430;
+  text-align: left;
+  white-space: nowrap;
+  animation: subtitle-scroll 26s linear infinite;
+}
+
+@keyframes subtitle-scroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .subtitle-ticker-track {
+    padding-left: 0;
+    animation: none;
+  }
+}
